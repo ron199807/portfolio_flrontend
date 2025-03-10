@@ -4,7 +4,7 @@
       <header class="header">
         <div class="container">
           <div class="logo">
-            <img src="../assets/ron.jpeg" alt="Logo" class="logo-placeholder" />
+            <img src="../assets/ron22.png" alt="Logo" class="logo-placeholder" />
             <!-- Using a placeholder logo since we can't extract the actual logo -->
           </div>
           <nav class="navigation">
@@ -24,10 +24,10 @@
             <div class="hero-text">
               <div class="section-label">— INTRODUCTION</div>
               <h1 class="hero-title">
-                Product Designer and Developer, based in California
+                Product Designer and Developer, based in Lusaka
               </h1>
               <p class="hero-description">
-                I'm a passionate web developer with more than 8 years of experience in application development, interface design, and user experience.
+                I'm a passionate web developer with more than 5 years of experience in application development, interface design, and user experience.
               </p>
               <a href="#contact" class="btn-primary">
                 My story
@@ -35,9 +35,8 @@
               </a>
             </div>
             <div class="hero-image">
-              <img src="../assets/ronald.jpg" alt="Carlos Mendoza" class="hidden" />
+              <img src="../assets/ronald.jpg" alt="Ronald Mweema" class="image-placeholder" />
               <!-- Using a placeholder since we can't extract the actual image -->
-              <div class="image-placeholder"></div>
             </div>
           </div>
         </div>
@@ -49,7 +48,7 @@
           <div class="section-label">— EXPERTISE</div>
           <h2 class="section-title">Any Type Of Query & Discussion.</h2>
           <p class="section-description">
-            I'm a passionate web developer with more than 8 years of experience in application development, interface design, and user experience.
+            I'm a passionate web developer with more than 5 years of experience in application development, interface design, and user experience.
           </p>
           <a href="#contact" class="link-yellow">
             hezalabs.com
@@ -66,7 +65,7 @@
               You can be creative, but more, you can have in your significant mind.
             </h2>
             <p class="creative-description">
-              I'm a passionate web developer with more than 8 years of experience in application development, interface design, and user experience.
+              I'm a passionate web developer with more than 5 years of experience in application development, interface design, and user experience.
             </p>
           </div>
           <div class="stats">
@@ -105,7 +104,7 @@
         </div>
       </section>
   
-      <!-- Clients Section -->
+      <!-- Clients Section
       <section class="clients">
         <div class="container">
           <div class="clients-grid">
@@ -120,7 +119,7 @@
             <div class="client-logo">tumblr.</div>
           </div>
         </div>
-      </section>
+      </section> -->
   
       <!-- Portfolio Section -->
       <section class="portfolio" id="works">
@@ -255,7 +254,7 @@
       <footer class="footer">
         <div class="container">
           <div class="logo">
-            <div class="logo-placeholder"></div>
+            <img src="../assets/ron22.png" alt="Ronald Mweema" class="logo-placeholder" />
           </div>
           <p class="footer-text">Powered by nothing. Just a human.</p>
           <div class="social-links">
@@ -346,8 +345,7 @@
   .logo-placeholder {
     width: 2.5rem;
     height: 2.5rem;
-    background-color: var(--color-yellow);
-    border-radius: 50%;
+    border-radius: .3rem;
   }
   
   .navigation ul {
