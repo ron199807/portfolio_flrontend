@@ -16,7 +16,7 @@
             </a>
           </div>
           <div class="hero-image">
-            <img src="../assets/ronald.jpg" alt="Ronald Mweema" class="image-placeholder" />
+            <img src="../assets/hero.jpg" alt="Ronald Mweema" class="image-placeholder" />
           </div>
         </div>
       </div>
@@ -28,5 +28,5 @@
   </script>
   
   <style scoped>
-  /* Add scoped styles for the hero component */
+  
   </style>

@@ -16,9 +16,6 @@
   </template>
   
   <script setup>
-  // You can add any necessary script logic here
+  
   </script>
   
-  <style scoped>
-  /* Add scoped styles for the header component */
-  </style>
