@@ -1,9 +1,8 @@
-
-Copy
 <template>
   <div class="blog-post">
     <!-- Blog Content -->
     <h1>{{ title }}</h1>
+    <img v-if="image" :src="image" alt="Blog Post Image" class="post-image" />
     <p>{{ content }}</p>
 
     <!-- Comment Section -->
@@ -28,13 +27,13 @@ Copy
 </template>
 
 <script>
-import axios from "axios";
-
+import axios from 'axios';
 export default {
   data() {
     return {
       title: "",
       content: "",
+      image: "",  
       comments: [],
       newComment: {
         name: "",
@@ -43,34 +42,30 @@ export default {
     };
   },
   async created() {
-    // Fetch blog post and comments when the component is created
     await this.fetchBlogPost();
-    await this.fetchComments();
   },
   methods: {
     async fetchBlogPost() {
       try {
-        const response = await axios.get("http://localhost:8000/api/blog/");
+        const response = await axios.get("http://localhost:8000/api/posts/1/"); // Replace 1 with the post ID
         this.title = response.data.title;
         this.content = response.data.content;
+        this.image = response.data.image ? `http://localhost:8000${response.data.image}` : "";  // Add this line
+        this.comments = response.data.comments;
       } catch (error) {
         console.error("Error fetching blog post:", error);
-      }
-    },
-    async fetchComments() {
-      try {
-        const response = await axios.get("http://localhost:8000/api/comments/");
-        this.comments = response.data;
-      } catch (error) {
-        console.error("Error fetching comments:", error);
       }
     },
     async addComment() {
       if (this.newComment.name && this.newComment.message) {
         try {
-          const response = await axios.post("http://localhost:8000/api/comments/", this.newComment);
-          this.comments.push(response.data); // Add the new comment to the list
-          this.newComment.name = ""; // Clear the form
+          const payload = {
+            ...this.newComment,
+            post: 1, // Replace 1 with the post ID
+          };
+          const response = await axios.post("http://localhost:8000/api/comments/", payload);
+          this.comments.push(response.data);
+          this.newComment.name = "";
           this.newComment.message = "";
         } catch (error) {
           console.error("Error adding comment:", error);
@@ -79,7 +74,7 @@ export default {
     },
     formatDate(dateString) {
       const date = new Date(dateString);
-      return date.toLocaleString(); // Format the date as needed
+      return date.toLocaleString();
     },
   },
 };
@@ -96,6 +91,13 @@ export default {
 h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+}
+
+.post-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
 }
 
 p {
