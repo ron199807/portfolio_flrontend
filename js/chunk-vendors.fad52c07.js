@@ -74,4 +74,4 @@ const c=({size:t,strokeWidth:e=2,absoluteStrokeWidth:n,color:c,iconNode:s,name:u
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const o=(0,r.A)("TwitterIcon",[["path",{d:"M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z",key:"pff0z6"}]])},9720:function(t,e,n){var r=n(200);t.exports=r},9838:function(t,e,n){"use strict";var r=n(1605),o=n(2929),i=n(3938);r({target:"Iterator",proto:!0,real:!0},{forEach:function(t){o(i(this),t,{IS_ITERATOR:!0})}})},9868:function(t,e,n){var r=n(3938);t.exports=function(t){var e=t["return"];if(void 0!==e)return r(e.call(t)).value}},9965:function(t,e,n){var r=n(9310),o=Function.toString;"function"!=typeof r.inspectSource&&(r.inspectSource=function(t){return o.call(t)}),t.exports=r.inspectSource}}]);
-//# sourceMappingURL=chunk-vendors.b2e301b5.js.map
+//# sourceMappingURL=chunk-vendors.fad52c07.js.map
